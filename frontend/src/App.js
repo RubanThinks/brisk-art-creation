@@ -144,7 +144,7 @@ function App() {
             {portfolioItems.map((item, index) => (
               <div key={index} className="portfolio-item">
                 <div className="portfolio-image">
-                  <div className="portfolio-placeholder"></div>
+                  <img src={item.image} alt={item.title} />
                 </div>
                 <div className="portfolio-overlay">
                   <h4>{item.title}</h4>
