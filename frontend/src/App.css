@@ -499,6 +499,14 @@ p, a, li {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+  }
+
   .brand-name {
     font-size: 48px;
   }
