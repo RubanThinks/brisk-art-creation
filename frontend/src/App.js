@@ -66,14 +66,24 @@ function App() {
                   alt="Brisk Art and Creation" 
                 />
               </div>
-              <span>BRISK</span>
+              <div className="navbar-brand-text">
+                <span className="navbar-brand-name">BRISK</span>
+                <span className="navbar-brand-tagline">Art and Creation</span>
+              </div>
             </div>
-            <ul className="navbar-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
+            
+            {/* Hamburger Menu Button */}
+            <button className="hamburger-menu" onClick={toggleMobileMenu} aria-label="Toggle menu">
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+
+            {/* Navigation Links */}
+            <ul className={`navbar-links ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+              <li><a href="#home" onClick={closeMobileMenu}>Home</a></li>
+              <li><a href="#about" onClick={closeMobileMenu}>About</a></li>
+              <li><a href="#services" onClick={closeMobileMenu}>Services</a></li>
+              <li><a href="#portfolio" onClick={closeMobileMenu}>Portfolio</a></li>
+              <li><a href="#contact" onClick={closeMobileMenu}>Contact</a></li>
             </ul>
           </div>
         </div>
