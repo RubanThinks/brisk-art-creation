@@ -139,7 +139,12 @@ p, a, li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--pure-white) 0%, var(--soft-beige) 100%);
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(233, 227, 218, 0.9) 100%),
+    url('https://customer-assets.emergentagent.com/job_geomarch/artifacts/xzsppnzt_brisk_art_creation.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   position: relative;
   padding: 120px 40px 100px;
 }
