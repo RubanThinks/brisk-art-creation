@@ -73,21 +73,14 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="hero-section" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
         <div className="hero-content">
-          <div className="logo-container fade-in">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_412c5c52-8627-4e18-b025-bde21c277008/artifacts/l2zuxo8r_brisk_art_creation%20logo.jpg" 
-              alt="Brisk Art and Creation Logo" 
-              className="brand-logo"
-            />
-          </div>
-          <h1 className="brand-name fade-in-delay-1">BRISK</h1>
-          <p className="brand-tagline fade-in-delay-2">Art and Creation</p>
-          <p className="brand-subtitle fade-in-delay-3">Architecture | Interior | Construction</p>
-          <p className="hero-subtext fade-in-delay-4">
+          <h1 className="brand-name fade-in">BRISK</h1>
+          <p className="brand-tagline fade-in-delay-1">Art and Creation</p>
+          <p className="brand-subtitle fade-in-delay-2">Architecture | Interior | Construction</p>
+          <p className="hero-subtext fade-in-delay-3">
             Where geometry meets emotion — and every space becomes a crafted experience.
           </p>
         </div>
-        <div className="scroll-indicator fade-in-delay-5">
+        <div className="scroll-indicator fade-in-delay-4">
           <div className="scroll-line"></div>
         </div>
       </section>
