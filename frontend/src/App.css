@@ -17,6 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .App {
   background: var(--pure-white);
   color: var(--deep-charcoal);
