@@ -1,52 +1,166 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { useEffect, useState } from 'react';
+import './App.css';
+import { MapPin, Mail, Phone, Instagram, ArrowRight, Home, Paintbrush, HardHat } from 'lucide-react';
 
 function App() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const portfolioItems = [
+    { title: 'Residence', subtitle: 'Light & Line' },
+    { title: 'Studio', subtitle: 'Material Rhythm' },
+    { title: 'Atrium', subtitle: 'Vertical Balance' },
+    { title: 'Lounge', subtitle: 'Warm Minimal Edges' },
+    { title: 'Workspace', subtitle: 'Graphic Silence' },
+    { title: 'Villa', subtitle: 'Geometric Harmony' }
+  ];
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      {/* Hero Section */}
+      <section className="hero-section" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
+        <div className="hero-content">
+          <div className="logo-container fade-in">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_412c5c52-8627-4e18-b025-bde21c277008/artifacts/l2zuxo8r_brisk_art_creation%20logo.jpg" 
+              alt="Brisk Art and Creation Logo" 
+              className="brand-logo"
+            />
+          </div>
+          <h1 className="brand-name fade-in-delay-1">BRISK</h1>
+          <p className="brand-tagline fade-in-delay-2">Art and Creation</p>
+          <p className="brand-subtitle fade-in-delay-3">Architecture | Interior | Construction</p>
+          <p className="hero-subtext fade-in-delay-4">
+            Where geometry meets emotion — and every space becomes a crafted experience.
+          </p>
+        </div>
+        <div className="scroll-indicator fade-in-delay-5">
+          <div className="scroll-line"></div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="about-section">
+        <div className="container">
+          <div className="about-content">
+            <div className="about-text">
+              <h2 className="section-title">About Us</h2>
+              <div className="about-description">
+                <p>
+                  At Brisk Art and Creation, we believe space is not just built — it is <em>composed</em>.
+                </p>
+                <p>
+                  Every surface, line, and light plane is guided by intention.
+                  We shape environments where proportion becomes beauty,
+                  and where purpose is engineered into the smallest detail.
+                </p>
+              </div>
+            </div>
+            <div className="geometric-accent"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="services-section">
+        <div className="container">
+          <h2 className="section-title centered">Our Services</h2>
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon">
+                <Home strokeWidth={1.5} size={48} />
+              </div>
+              <h3>Architecture</h3>
+              <p>Form, function, and flow unified through geometry.</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">
+                <Paintbrush strokeWidth={1.5} size={48} />
+              </div>
+              <h3>Interior Design</h3>
+              <p>Material balance and light harmony.</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">
+                <HardHat strokeWidth={1.5} size={48} />
+              </div>
+              <h3>Construction</h3>
+              <p>Structural precision and detail craftsmanship.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="portfolio-section">
+        <div className="container">
+          <h2 className="section-title centered">Portfolio</h2>
+          <div className="portfolio-grid">
+            {portfolioItems.map((item, index) => (
+              <div key={index} className="portfolio-item">
+                <div className="portfolio-image">
+                  <div className="portfolio-placeholder"></div>
+                </div>
+                <div className="portfolio-overlay">
+                  <h4>{item.title}</h4>
+                  <p>{item.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="container">
+          <div className="footer-grid">
+            <div className="footer-col">
+              <h3 className="footer-brand">BRISK</h3>
+              <p className="footer-tagline">Art and Creation</p>
+              <p className="footer-subtitle">Architecture | Interior | Construction</p>
+            </div>
+            <div className="footer-col">
+              <h4>Quick Links</h4>
+              <ul className="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>Contact</h4>
+              <div className="contact-info">
+                <a href="https://maps.app.goo.gl/5rZBsjyGbAdubXJc6?g_st=aw" target="_blank" rel="noopener noreferrer" className="contact-item">
+                  <MapPin strokeWidth={1.5} size={20} />
+                  <span>49/18, Bharathi Street, Swarnapuri<br />Salem – 636004, Tamil Nadu</span>
+                </a>
+                <a href="tel:+918667442624" className="contact-item">
+                  <Phone strokeWidth={1.5} size={20} />
+                  <span>+91 86674 42624</span>
+                </a>
+                <a href="mailto:briskartandcreation@gmail.com" className="contact-item">
+                  <Mail strokeWidth={1.5} size={20} />
+                  <span>briskartandcreation@gmail.com</span>
+                </a>
+                <a href="https://instagram.com/briskartandcreation" target="_blank" rel="noopener noreferrer" className="contact-item">
+                  <Instagram strokeWidth={1.5} size={20} />
+                  <span>@briskartandcreation</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>© 2025 Brisk Art and Creation. Geometry. Precision. Meaning.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
