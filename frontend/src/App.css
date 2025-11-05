@@ -188,6 +188,10 @@ p, a, li {
   font-style: italic;
   max-width: 600px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px 30px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
 }
 
 .scroll-indicator {
