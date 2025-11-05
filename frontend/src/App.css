@@ -154,21 +154,12 @@ p, a, li {
   max-width: 800px;
 }
 
-.logo-container {
-  margin-bottom: 40px;
-}
-
-.brand-logo {
-  width: 180px;
-  height: auto;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
-}
-
 .brand-name {
-  font-size: 64px;
-  letter-spacing: 8px;
+  font-size: 72px;
+  letter-spacing: 12px;
   color: var(--accent-black);
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .brand-tagline {
