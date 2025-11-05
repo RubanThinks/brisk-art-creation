@@ -530,16 +530,27 @@ p, a, li {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-brand span {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
   .navbar-links {
-    gap: 20px;
+    gap: 15px;
   }
 
   .navbar-links a {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .brand-name {
     font-size: 48px;
+    letter-spacing: 6px;
   }
 
   .brand-tagline {
