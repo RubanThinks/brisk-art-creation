@@ -22,6 +22,22 @@ function App() {
 
   return (
     <div className="App">
+      {/* Navigation Header */}
+      <nav className={`navbar ${scrollY > 50 ? 'navbar-scrolled' : ''}`}>
+        <div className="container">
+          <div className="navbar-content">
+            <div className="navbar-brand">BRISK</div>
+            <ul className="navbar-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section id="home" className="hero-section" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
         <div className="hero-content">
