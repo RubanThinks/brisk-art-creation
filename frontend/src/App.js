@@ -50,7 +50,15 @@ function App() {
       <nav className={`navbar ${scrollY > 50 ? 'navbar-scrolled' : ''}`}>
         <div className="container">
           <div className="navbar-content">
-            <div className="navbar-brand">BRISK</div>
+            <div className="navbar-brand">
+              <div className="navbar-logo">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_geomarch/artifacts/xzsppnzt_brisk_art_creation.jpg" 
+                  alt="Brisk Art and Creation" 
+                />
+              </div>
+              <span>BRISK</span>
+            </div>
             <ul className="navbar-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
