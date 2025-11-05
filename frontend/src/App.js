@@ -45,7 +45,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section className="about-section">
+      <section id="about" className="about-section">
         <div className="container">
           <div className="about-content">
             <div className="about-text">
