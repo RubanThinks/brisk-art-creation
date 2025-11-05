@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { MapPin, Mail, Phone, Instagram, ArrowRight, Home, Paintbrush, HardHat } from 'lucide-react';
+import { MapPin, Mail, Phone, Instagram, Linkedin, ArrowRight, Home, Paintbrush, HardHat } from 'lucide-react';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
