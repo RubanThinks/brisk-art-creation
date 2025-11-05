@@ -193,6 +193,10 @@ function App() {
                   <Instagram strokeWidth={1.5} size={20} />
                   <span>@briskartandcreation</span>
                 </a>
+                <a href="https://www.linkedin.com/in/brisk-art-creation-555aa91aa" target="_blank" rel="noopener noreferrer" className="contact-item">
+                  <Linkedin strokeWidth={1.5} size={20} />
+                  <span>Brisk Art and Creation</span>
+                </a>
               </div>
             </div>
           </div>
