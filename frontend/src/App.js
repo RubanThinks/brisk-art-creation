@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       {/* Hero Section */}
-      <section className="hero-section" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
+      <section id="home" className="hero-section" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
         <div className="hero-content">
           <div className="logo-container fade-in">
             <img 
