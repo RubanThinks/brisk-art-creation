@@ -117,7 +117,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer id="contact" className="footer">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
