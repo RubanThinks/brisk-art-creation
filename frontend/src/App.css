@@ -382,8 +382,8 @@ p, a, li {
   transform: translateY(0);
 }
 
-.portfolio-item:hover .portfolio-image {
-  transform: scale(1.05);
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.1);
 }
 
 .portfolio-overlay h4 {
