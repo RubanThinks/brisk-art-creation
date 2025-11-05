@@ -1,15 +1,24 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { MapPin, Mail, Phone, Instagram, Linkedin, ArrowRight, Home, Paintbrush, HardHat } from 'lucide-react';
+import { MapPin, Mail, Phone, Instagram, Linkedin, ArrowRight, Home, Paintbrush, HardHat, Menu, X } from 'lucide-react';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   const portfolioItems = [
     { 
