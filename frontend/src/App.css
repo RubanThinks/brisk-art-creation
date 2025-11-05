@@ -76,6 +76,7 @@ p, a, li {
   overflow: hidden;
   border: 2px solid var(--warm-taupe);
   transition: border-color 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .navbar-logo img {
@@ -89,12 +90,27 @@ p, a, li {
   transform: scale(1.05);
 }
 
-.navbar-brand span {
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navbar-brand-name {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 3px;
   color: var(--accent-black);
+  line-height: 1;
+}
+
+.navbar-brand-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 14px;
+  color: var(--warm-taupe);
+  font-weight: 400;
+  line-height: 1;
 }
 
 .navbar-links {
