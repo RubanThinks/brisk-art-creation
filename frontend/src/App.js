@@ -67,7 +67,7 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section className="services-section">
+      <section id="services" className="services-section">
         <div className="container">
           <h2 className="section-title centered">Our Services</h2>
           <div className="services-grid">
