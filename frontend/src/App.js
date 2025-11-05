@@ -97,7 +97,7 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="portfolio-section">
+      <section id="portfolio" className="portfolio-section">
         <div className="container">
           <h2 className="section-title centered">Portfolio</h2>
           <div className="portfolio-grid">
