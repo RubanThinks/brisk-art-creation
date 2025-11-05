@@ -12,12 +12,36 @@ function App() {
   }, []);
 
   const portfolioItems = [
-    { title: 'Residence', subtitle: 'Light & Line' },
-    { title: 'Studio', subtitle: 'Material Rhythm' },
-    { title: 'Atrium', subtitle: 'Vertical Balance' },
-    { title: 'Lounge', subtitle: 'Warm Minimal Edges' },
-    { title: 'Workspace', subtitle: 'Graphic Silence' },
-    { title: 'Villa', subtitle: 'Geometric Harmony' }
+    { 
+      title: 'Residence', 
+      subtitle: 'Light & Line',
+      image: 'https://images.unsplash.com/photo-1549791084-5f78368b208b?w=800&q=80'
+    },
+    { 
+      title: 'Studio', 
+      subtitle: 'Material Rhythm',
+      image: 'https://images.unsplash.com/photo-1520529890308-f503006340b4?w=800&q=80'
+    },
+    { 
+      title: 'Atrium', 
+      subtitle: 'Vertical Balance',
+      image: 'https://images.unsplash.com/photo-1592274951725-1688461e2019?w=800&q=80'
+    },
+    { 
+      title: 'Lounge', 
+      subtitle: 'Warm Minimal Edges',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80'
+    },
+    { 
+      title: 'Workspace', 
+      subtitle: 'Graphic Silence',
+      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80'
+    },
+    { 
+      title: 'Villa', 
+      subtitle: 'Geometric Harmony',
+      image: 'https://images.unsplash.com/photo-1548248823-ce16a73b6d49?w=800&q=80'
+    }
   ];
 
   return (
