@@ -207,15 +207,15 @@ function App() {
               <div className="contact-info">
                 <a href="https://maps.app.goo.gl/5rZBsjyGbAdubXJc6?g_st=aw" target="_blank" rel="noopener noreferrer" className="contact-item">
                   <MapPin strokeWidth={1.5} size={20} />
-                  <span>49/18, Bharathi Street, Swarnapuri<br />Salem – 636004, Tamil Nadu</span>
+                  <span>4/149, Mangayarkarasi street, Balaji Nagar, Fairlands<br />Salem – 636016, Tamil Nadu</span>
                 </a>
                 <a href="tel:+918667442624" className="contact-item">
                   <Phone strokeWidth={1.5} size={20} />
-                  <span>+91 86674 42624</span>
+                  <span>+91 9655724488</span>
                 </a>
                 <a href="mailto:briskartandcreation@gmail.com" className="contact-item">
                   <Mail strokeWidth={1.5} size={20} />
-                  <span>briskartandcreation@gmail.com</span>
+                  <span>briskartcreation@gmail.com</span>
                 </a>
                 <a href="https://instagram.com/briskartandcreation" target="_blank" rel="noopener noreferrer" className="contact-item">
                   <Instagram strokeWidth={1.5} size={20} />
@@ -223,7 +223,7 @@ function App() {
                 </a>
                 <a href="https://www.linkedin.com/in/brisk-art-creation-555aa91aa" target="_blank" rel="noopener noreferrer" className="contact-item">
                   <Linkedin strokeWidth={1.5} size={20} />
-                  <span>Brisk Art and Creation</span>
+                  <span>Brisk Art Creation</span>
                 </a>
               </div>
             </div>
