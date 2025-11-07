@@ -213,7 +213,7 @@ function App() {
                   <Phone strokeWidth={1.5} size={20} />
                   <span>+91 9655724488</span>
                 </a>
-                <a href="mailto:briskartandcreation@gmail.com" className="contact-item">
+                <a href="mailto:briskartcreation@gmail.com" className="contact-item">
                   <Mail strokeWidth={1.5} size={20} />
                   <span>briskartcreation@gmail.com</span>
                 </a>
