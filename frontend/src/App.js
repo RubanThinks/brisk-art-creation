@@ -162,7 +162,7 @@ function App() {
   {/* Right: Image */}
   <div className="md:w-1/2 w-full flex justify-center mt-8 md:mt-0">
     <img
-      src="/about.jpg" // 🔹 replace with your uploaded image name in /public folder
+      src="/about.png" // 🔹 replace with your uploaded image name in /public folder
       alt="About"
       className="rounded-full object-cover w-40 h-40 md:w-64 md:h-64 shadow-lg border-4 border-white"
     />
