@@ -142,34 +142,32 @@ function App() {
         </div>
       </section>
 
-      {/* About Section (with uploaded image) */}
-      <section id="about" className="about-section">
-        <div className="container about-flex">
-          <div className="about-text">
-            <h2 className="section-title">About Us</h2>
-            <div className="about-description">
-              <p>
-                At Brisk Art and Creation, we believe space is not just built — it is <em>composed</em>.
-              </p>
-              <p>
-                Every surface, line, and light plane is guided by intention.
-                We shape environments where proportion becomes beauty,
-                and where purpose is engineered into the smallest detail.
-              </p>
-            </div>
-          </div>
+      <section
+  id="about"
+  className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-16 bg-gradient-to-b from-white to-gray-50"
+>
+  {/* Left: Text */}
+  <div className="md:w-1/2 w-full text-center md:text-left space-y-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">About Me</h2>
+    <p className="text-gray-600 leading-relaxed">
+      I’m a creative artist and designer who loves transforming ideas into stunning digital artworks.
+      My goal is to create designs that inspire and tell stories through colors, textures, and details.
+    </p>
+    <p className="text-gray-600 leading-relaxed">
+      Over the years, I’ve worked on multiple art forms — from digital illustrations to custom concepts
+      that connect emotionally with people.
+    </p>
+  </div>
 
-          {/* Image: using file placed in frontend/public/about-image.jpg */}
-          <div className="about-image">
-            <img
-              src="/about-image.jpg"
-              alt="Brisk Art and Creation studio or project"
-              className="about-img"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
+  {/* Right: Image */}
+  <div className="md:w-1/2 w-full flex justify-center mt-8 md:mt-0">
+    <img
+      src="/about.jpg" // 🔹 replace with your uploaded image name in /public folder
+      alt="About"
+      className="rounded-full object-cover w-40 h-40 md:w-64 md:h-64 shadow-lg border-4 border-white"
+    />
+  </div>
+</section>
 
       {/* Services Section */}
       <section id="services" className="services-section">
