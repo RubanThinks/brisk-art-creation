@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("/brisk_art_creation_logo.jpg") center center / cover no-repeat;
+background: url("../public/brisk_art_creation_logo.jpg") center center / cover no-repeat;
   text-align: center;
   color: white;
 }
