@@ -124,24 +124,25 @@ function App() {
           alt="About Brisk Art and Creation"
         />
       </div>
+{/* About Text */}
+<div className="about-text">
+  <h2 className="section-title">About Us</h2>
+  <div className="about-description">
+    <p>
+      At <strong>Brisk Art and Creation</strong>, we believe space is not just built — it is <em>composed</em>.
+    </p>
+    <p>
+      Every surface, line, and light plane is guided by intention.
+      We shape environments where proportion becomes beauty,
+      and where purpose is engineered into the smallest detail.
+    </p>
 
-      {/* About Text */}
-      <div className="about-text">
-        <h2 className="section-title">About Us</h2>
-        <div className="about-description">
-          <p>
-            At Brisk Art and Creation, we believe space is not just built — it is <em>composed</em>.
-          </p>
-          <p>
-            Every surface, line, and light plane is guided by intention.
-            We shape environments where proportion becomes beauty,
-            and where purpose is engineered into the smallest detail.
-          </p>
-        </div>
-      </div>
+    <div className="owner-info">
+      <h3 className="owner-name">Robert Williams C</h3>
+      <p className="owner-role">Founder & Lead Designer, Brisk Art and Creation</p>
     </div>
   </div>
-</section>
+</div>
 
 
       {/* Services Section */}
