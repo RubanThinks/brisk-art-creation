@@ -120,7 +120,7 @@ function App() {
       {/* About Image */}
       <div className="about-image">
         <img 
-          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80" 
+          src="/about-image.png" 
           alt="About Brisk Art and Creation"
         />
       </div>
