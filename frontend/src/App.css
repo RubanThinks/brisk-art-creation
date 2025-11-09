@@ -719,6 +719,12 @@ p, a, li {
   .container {
     padding: 0 20px;
   }
+.about-owner {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+}
 
   .contact-item {
     font-size: 13px;
