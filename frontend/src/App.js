@@ -112,27 +112,37 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="about-section">
-        <div className="container">
-          <div className="about-content">
-            <div className="about-text">
-              <h2 className="section-title">About Us</h2>
-              <div className="about-description">
-                <p>
-                  At Brisk Art and Creation, we believe space is not just built — it is <em>composed</em>.
-                </p>
-                <p>
-                  Every surface, line, and light plane is guided by intention.
-                  We shape environments where proportion becomes beauty,
-                  and where purpose is engineered into the smallest detail.
-                </p>
-              </div>
-            </div>
-            <div className="geometric-accent"></div>
-          </div>
+    {/* About Section */}
+<section id="about" className="about-section">
+  <div className="container">
+    <div className="about-content">
+      
+      {/* About Image */}
+      <div className="about-image">
+        <img 
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80" 
+          alt="About Brisk Art and Creation"
+        />
+      </div>
+
+      {/* About Text */}
+      <div className="about-text">
+        <h2 className="section-title">About Us</h2>
+        <div className="about-description">
+          <p>
+            At Brisk Art and Creation, we believe space is not just built — it is <em>composed</em>.
+          </p>
+          <p>
+            Every surface, line, and light plane is guided by intention.
+            We shape environments where proportion becomes beauty,
+            and where purpose is engineered into the smallest detail.
+          </p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Services Section */}
       <section id="services" className="services-section">
