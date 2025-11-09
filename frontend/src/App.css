@@ -723,3 +723,26 @@ p, a, li {
     font-size: 13px;
   }
 }
+.owner-info {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .owner-info {
+    text-align: left;
+  }
+}
+
+.owner-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.owner-role {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
