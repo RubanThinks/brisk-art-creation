@@ -5,19 +5,23 @@ import { MapPin, Mail, Phone, Instagram, Linkedin, Home, Paintbrush, HardHat, Me
 function App() {
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
+    const handleResize = () => setIsDesktop(window.innerWidth > 768);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.classList.add('menu-open');
-    } else {
-      document.body.classList.remove('menu-open');
-    }
+    document.body.classList.toggle('menu-open', mobileMenuOpen);
   }, [mobileMenuOpen]);
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
@@ -51,12 +55,11 @@ function App() {
               </div>
             </div>
 
-            {/* Hamburger Menu Button */}
+            {/* Hamburger Menu */}
             <button className="hamburger-menu" onClick={toggleMobileMenu} aria-label="Toggle menu">
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
 
-            {/* Navigation Links */}
             <ul className={`navbar-links ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
               <li><a href="#home" onClick={closeMobileMenu}>Home</a></li>
               <li><a href="#about" onClick={closeMobileMenu}>About</a></li>
@@ -69,7 +72,14 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section" style={{ transform: `translateY(${scrollY * 0.3}px)` }}>
+      <section
+        id="home"
+        className="hero-section"
+        style={{
+          transform: isDesktop ? `translateY(${scrollY * 0.3}px)` : 'none',
+          minHeight: '80vh'
+        }}
+      >
         <div className="hero-content">
           <h1 className="brand-name fade-in">BRISK</h1>
           <p className="brand-tagline fade-in-delay-1">Art and Creation</p>
@@ -176,7 +186,7 @@ function App() {
               <div className="contact-info">
                 <a href="https://maps.app.goo.gl/5rZBsjyGbAdubXJc6?g_st=aw" target="_blank" rel="noopener noreferrer" className="contact-item">
                   <MapPin strokeWidth={1.5} size={20} />
-                  <span>4/149, Mangayarkarasi street, Balaji Nagar, Fairlands<br />Salem – 636016, Tamil Nadu</span>
+                  <span>4/149, Mangayarkarasi Street, Balaji Nagar, Fairlands<br />Salem – 636016, Tamil Nadu</span>
                 </a>
                 <a href="tel:+919655724488" className="contact-item">
                   <Phone strokeWidth={1.5} size={20} />
